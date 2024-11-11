@@ -1,0 +1,56 @@
+name: test_project
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  equatable: ^2.0.5
+  flutter_bloc: ^8.1.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  fonts:
+    - family: Rosarivo
+      fonts:
+        - asset: assets/fonts/RosarivoRegular.ttf
+          weight: 400
+    - family: Rhodium Libre
+      fonts:
+        - asset: assets/fonts/RhodiumLibreRegular.ttf
+          weight: 400
+    - family: Irish Grover
+      fonts:
+        - asset: assets/fonts/IrishGroverRegular.ttf
+          weight: 400
+    - family: Ribeye
+      fonts:
+        - asset: assets/fonts/RibeyeRegular.ttf
+          weight: 400
+    - family: Rye
+      fonts:
+        - asset: assets/fonts/RyeRegular.ttf
+          weight: 400
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/christmas WELCOME PAGE.png
+    - assets/images/image 51.png
+    - assets/images/MERRY CHRISTMAS TO.png
+    - assets/images/NAME.png
+    - assets/images/Variant2.png
+    - assets/images/Group 7517 (1).png
+    - assets/images/Group 8699.png
+    - assets/images/STARS BG WELCOME PAGE@2x.png
+
