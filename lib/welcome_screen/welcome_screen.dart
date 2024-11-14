@@ -27,6 +27,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   double _opacity4 = 0.0;
   double _opacity5 = 0.0;
   double _opacity6 = 0.0;
+  double _opacityText1 = 0.0;
+  double _opacityText2 = 0.0;
+  double _opacityText3 = 0.0;
   double _opacity7 = 0.0;
 
   @override
@@ -48,6 +51,15 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     setState(() => _opacity5 = 1.0);
     await Future.delayed(const Duration(milliseconds: 500));
     setState(() => _opacity6 = 1.0);
+    
+    // Animating each text widget individually
+    await Future.delayed(const Duration(milliseconds: 500));
+    setState(() => _opacityText1 = 1.0);
+    await Future.delayed(const Duration(milliseconds: 500));
+    setState(() => _opacityText2 = 1.0);
+    await Future.delayed(const Duration(milliseconds: 500));
+    setState(() => _opacityText3 = 1.0);
+
     await Future.delayed(const Duration(milliseconds: 500));
     setState(() => _opacity7 = 1.0);
   }
@@ -146,7 +158,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         ),
                       ),
                     ),
-                    // Overlapping GIFs
                     Stack(
                       alignment: Alignment.center,
                       children: [
@@ -181,41 +192,45 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     ),
                     const SizedBox(height: 40),
                     AnimatedOpacity(
-                      opacity: _opacity7,
+                      opacity: _opacityText1,
                       duration: const Duration(milliseconds: 500),
-                      child: const Column(
-                        children: [
-                          Text(
-                            "JUST TYPE IN",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Color(0xFFFFFFFF),
-                              fontSize: 24,
-                              fontFamily: 'Ribeye',
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                          Text(
-                            "ALL YOUR WISHES",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Color(0xFFFFFFFF),
-                              fontSize: 24,
-                              fontFamily: 'Ribeye',
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                          Text(
-                            "FOR CHRISTMAS!",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Color(0xFFFFFFFF),
-                              fontSize: 31,
-                              fontFamily: 'Ribeye',
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                        ],
+                      child: const Text(
+                        "JUST TYPE IN",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color(0xFFFFFFFF),
+                          fontSize: 24,
+                          fontFamily: 'Ribeye',
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ),
+                    AnimatedOpacity(
+                      opacity: _opacityText2,
+                      duration: const Duration(milliseconds: 500),
+                      child: const Text(
+                        "ALL YOUR WISHES",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color(0xFFFFFFFF),
+                          fontSize: 24,
+                          fontFamily: 'Ribeye',
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ),
+                    AnimatedOpacity(
+                      opacity: _opacityText3,
+                      duration: const Duration(milliseconds: 500),
+                      child: const Text(
+                        "FOR CHRISTMAS!",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color(0xFFFFFFFF),
+                          fontSize: 31,
+                          fontFamily: 'Ribeye',
+                          fontWeight: FontWeight.w400,
+                        ),
                       ),
                     ),
                     AnimatedOpacity(
